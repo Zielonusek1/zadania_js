@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body
+        {
+            color: green;
+            font-size: 47;
+        }
+        </style>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        var d1_gme=prompt("dzien1=","");
+        var g1_gme=prompt("godzina dnia pierwszeg","");
+        var d2_gme=prompt("dzien2=","");
+        var g2_gme=prompt("godzina dnia drugiego","");
+        
+        var a=parseFloat(d1_gme);
+        var b=parseFloat(d2_gme);
+        ilosc_dni=a-b;
+        ilosc_godzin=ilosc_dni*24;
+        ilosc_minut=ilosc_godzin*60;
+        ilosc_sekund=ilosc_minut*60;
+
+
+        var c=parseFloat(g1_gme);
+        var d=parseFloat(g2_gme);
+        
+        ilosc_godzina=-4;
+        ilosc_minuta=ilosc_godzina*60;
+        ilosc_sekunda=ilosc_minuta*60;
+
+        ilosc_godzine=d;
+        ilosc_minute=ilosc_godzine*60;
+        ilosc_sekunde=ilosc_minute*60;
+        ilosc_sekund_do_odjencia=ilosc_sekunda+ilosc_sekunde;
+        ilosc_sekund_koncowa=ilosc_sekund-ilosc_sekund_do_odjencia;
+        document.write("Ilość sekund upływająca między <b>"+a+"</b> stycznia o godzinie <b> "+c+ "</b> a <b>"+b+" </b>stycznia o godzinie <b>" +d+"</b> to <b>" +ilosc_sekund_koncowa+ " sekund </b>")
+    </script>
+</body>
+</html>
