@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <textarea name="gmerek" cols="150" rows="70" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20</title>
+</head>
+<body>
+    <h1>Wczytaj trzy punkty nie współliniowe</h1>
+    <form>
+        <label for="xa_gme">xa:</label>
+        <input type="number" id="xa_gme" required><br><br>
+        <label for="ya_gme">ya:</label>
+        <input type="number" id="ya_gme" required><br><br>
+        <label for="xb_gme">xb:</label>
+        <input type="number" id="xb_gme" required><br><br>
+        <label for="yb_gme">yb:</label>
+        <input type="number" id="yb_gme" required><br><br>
+        <label for="xc_gme">xc:</label>
+        <input type="number" id="xc_gme" required><br><br>
+        <label for="yc_gme">yc:</label>
+        <input type="number" id="yc_gme" required><br><br>
+        <button type="button" onclick="oblicz()">Oblicz</button>
+    </form>
+    <p id="wynik"></p>
+
+    <script>
+        function AB_gme() {
+            var xa_gme = parseFloat(document.getElementById("xa_gme").value);
+            var ya_gme = parseFloat(document.getElementById("ya_gme").value);
+            var xb_gme = parseFloat(document.getElementById("xb_gme").value);
+            var yb_gme = parseFloat(document.getElementById("yb_gme").value);
+            var AB = Math.sqrt(Math.pow(xb_gme - xa_gme, 2) + Math.pow(yb_gme - ya_gme, 2));
+            return AB;
+        }
+
+        function BC_gme() {
+            var xb_gme = parseFloat(document.getElementById("xb_gme").value);
+            var yb_gme = parseFloat(document.getElementById("yb_gme").value);
+            var xc_gme = parseFloat(document.getElementById("xc_gme").value);
+            var yc_gme = parseFloat(document.getElementById("yc_gme").value);
+            var BC = Math.sqrt(Math.pow(xc_gme - xb_gme, 2) + Math.pow(yc_gme - yb_gme, 2));
+            return BC;
+        }
+
+        function AC_gme() {
+            var xa_gme = parseFloat(document.getElementById("xa_gme").value);
+            var ya_gme = parseFloat(document.getElementById("ya_gme").value);
+            var xc_gme = parseFloat(document.getElementById("xc_gme").value);
+            var yc_gme = parseFloat(document.getElementById("yc_gme").value);
+            var AC = Math.sqrt(Math.pow(xc_gme - xa_gme, 2) + Math.pow(yc_gme - ya_gme, 2));
+            return AC;
+        }
+
+        function oblicz() {
+            var AB = AB_gme();
+            var BC = BC_gme();
+            var AC = AC_gme();
+            document.getElementById("wynik").innerHTML = "Długości boków: AB = " + AB + ", BC = " + BC + ", AC = " + AC;
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+    
+</body>
+</html>
