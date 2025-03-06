@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        
+        function Autobus(ile_pasazerow, ile_kol, dlugosc_w_metrach, wysokosc, ilosc_drzwi) {
+            this.ile_pasazerow = ile_pasazerow;
+            this.ile_kol = ile_kol;
+            this.dlugosc_w_metrach = dlugosc_w_metrach;
+            this.wysokosc = wysokosc;
+            this.ilosc_drzwi = ilosc_drzwi; 
+        }
+
+       
+        Autobus.prototype.autobus_wyswietl_gmerek = function () {
+            document.write(
+                "Autobus ma : " + this.ile_kol + " kół, " +
+                this.dlugosc_w_metrach + " metrów długości , " +
+                this.ile_pasazerow + " maksymalnie pasażerów, " +
+                this.wysokosc + " metry wysokości, " +
+                this.ilosc_drzwi + " drzwi.<br>"
+            );
+        };
+
+        
+        var autobus1 = new Autobus(50, 6, 12, 3.5, 2);
+        var autobus2 = new Autobus(70, 8, 18, 4, 3);
+        var autobus3 = new Autobus(90, 10, 30, 5, 4);
+
+       
+        autobus1.autobus_wyswietl_gmerek();
+        autobus2.autobus_wyswietl_gmerek();
+        autobus3.autobus_wyswietl_gmerek();
+
+        
+        Autobus.prototype.autobus_pokaz_gmerek = function () {
+            alert("Autobus ma: " + this.ilosc_drzwi + " drzwi");
+        };
+
+        
+        autobus1.autobus_pokaz_gmerek();
+
+    </script>
+</head>
+<body>
+    Programowanie obiektowe. <br>
+    Obiekt to autobus<br>
+    Pola:<br>
+    - ile_pasazerow<br>
+    - ile_kol<br>
+    - dlugosc_w_metrach<br>
+    Metoda: autobus_wyswietl_gmerek<br>
+    Nowe pole to wysokosc <br>
+    Nowa metoda to autobus_pokaz_gmerek();<br>
+</body>
+</html>
