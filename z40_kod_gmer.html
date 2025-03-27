@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <textarea name="gmerek" cols="100" rows="37" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie JavaScript</title>
+    <style>
+        h1 { text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<h1>Proste działania</h1>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+
+<input type="button" value="DODAWANIE" onclick="suma_gme()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_gme()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_gme()">
+<input type="button" value="DZIELENIE" onclick="iloraz_gme()">
+<input type="button" value="TEORIA-gme" onclick="teoria_gme()">
+<div id="wynik" style="margin-top:20px;"></div>
+
+<script>
+function suma_gme() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var suma = (a + b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+    }
+}
+
+function roznica_gme() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var roznica = (a - b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+    }
+}
+
+function iloczyn_gme() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var iloczyn = (a * b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+    }
+}
+
+function iloraz_gme() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        if (b == 0) {
+            document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+        } else {
+            var iloraz = (a / b).toFixed(2);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+        }
+    }
+}
+
+function teoria_gme() {
+    var teoriaHTML = "";
+    teoriaHTML += "<font color='green' size='4'>1. Pierwsza linia kodu:</font><br>";
+    teoriaHTML += "<font color='red'>&lt;label for='a'&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type='number' id='a'&gt;</font><br>";
+    teoriaHTML += "<font color='green'>Opis: Tworzy etykietę i pole do wprowadzania liczby.</font><br><br>";
+
+    teoriaHTML += "<font color='green' size='4'>2. Druga linia kodu:</font><br>";
+    teoriaHTML += "<font color='red'>&lt;input type='button' value='DODAWANIE' onclick='suma_gme()'&gt;</font><br>";
+    teoriaHTML += "<font color='green'>Opis: Tworzy przycisk do dodawania i przypisuje funkcję.</font><br><br>";
+
+    teoriaHTML += "<font color='green' size='4'>3. Trzecia linia kodu:</font><br>";
+    teoriaHTML += "<font color='red'>var a = document.getElementById('a').value;</font><br>";
+    teoriaHTML += "<font color='green'>Opis: Pobiera wartość wpisaną w pole o id='a'.</font><br><br>";
+
+    teoriaHTML += "<font color='green' size='4'>4. Czwarta linia kodu:</font><br>";
+    teoriaHTML += "<font color='red'>if (a == '' || b == '')</font><br>";
+    teoriaHTML += "<font color='green'>Opis: Sprawdza, czy użytkownik wpisał obie liczby.</font><br><br>";
+
+    teoriaHTML += "<font color='green' size='4'>5. Piąta linia kodu:</font><br>";
+    teoriaHTML += "<font color='red'>document.getElementById('wynik').innerHTML = 'Wynik działania wynosi: ' + suma;</font><br>";
+    teoriaHTML += "<font color='green'>Opis: Wyświetla wynik w przeglądarce.</font><br>";
+
+    document.getElementById("wynik").innerHTML = teoriaHTML;
+}
+</script>
+
+</body>
+</html>
+
+    </textarea>
+</body>
+</html>

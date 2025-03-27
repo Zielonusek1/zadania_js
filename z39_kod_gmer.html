@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <textarea name="gmerek" cols="100" rows="37" readonly>
+        <!DOCTYPE html>
+        <html lang="pl">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zadanie 39</title>
+        </head>
+        <body>
+            <h2 style="color:green;">MENU:</h2>
+            <p style="color:red;">1 - CZERWONY</p>
+            <p style="color:blue;">2 - NIEBIESKI</p>
+            
+            <input type="button" value="Oblicz" onclick="fun_xyz()" />
+            
+            
+            <script>
+                function fun_xyz() {
+                    var opcja_dana_gme = prompt("Podaj kolor (1, 2, czerwony, niebieski)", "");
+                    if (opcja_dana_gme !== null) {
+                        opcja_dana_gme = opcja_dana_gme.toLowerCase();
+                        if (opcja_dana_gme == "1" || opcja_dana_gme == "czerwony") {
+                            document.write('<h1 style="color:red; font-size:7;">Wczytałeś kolor czerwony</h1>');
+                        } else if (opcja_dana_gme == "2" || opcja_dana_gme == "niebieski") {
+                            document.write('<h6 style="color:blue; font-size:1;">Wczytałeś kolor niebieski</h6>');
+                        } else {
+                            alert("Nieprawidłowa wartość. Spróbuj ponownie.");
+                        }
+                    }
+                }
+            </script>
+        </body>
+        </html>
+        
+    </textarea>
+</body>
+</html>
